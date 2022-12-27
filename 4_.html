@@ -1,0 +1,70 @@
+<html>
+<head>
+    <title>Метод shift()</title>
+
+    <script type="text/javascript">
+     //     2. Создать функцию для нахождения минимального и максимального элемента массива getMinAndMax(array).
+     // Результат должен выводиться в консоль.
+
+        let number = [32,33,1,4,232,12312,45657,7867,456];
+
+        function getMinAndMax(array){
+
+        let max;
+
+        let min;
+
+        max = min = array[0];
+
+             for(let i = 1; i<array.length;i++){
+               
+                if(array[i]>max){
+
+                    max=array[i];
+
+                }else if(array[i]<min){
+
+                    min=array[i];
+                }
+
+            }
+            console.log(`Max = ${max} Min = ${min}`)
+        }
+        getMinAndMax(number);
+  
+// 3. Определить элементы массива и вывести их значения, индексы которых лежит в указанном пределе. Предел вводит пользователь.
+        function within(array){
+        
+         let x = +prompt("Enter start");
+         let y = +prompt("Enter end");
+        for(let i = x; i<y;i++){
+        
+        document.write(`${array[i]} </br>`)
+        
+        }
+        }
+       within(number);
+ // 4. Отсортировать массив на 10 чисел в порядке возростания. Значения принимаются от пользователя. Сортировка осушествляется методом sort().
+
+  number.sort(function (a, b) { return a - b; });
+        console.log(number);
+
+    // 5. Создать программу, выполняющую вставку элемента в массив после элемента, значение которого укажет пользователь.
+    let a = +prompt("Enter element");
+    number.splice(a, 0, 4, 7, 1);
+      console.log(number);
+    //    6. Необходимо получить предпоследний элемент из массива month и вывести его на экран. 
+    // var month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
+
+    var month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+        
+  console.log(month.pop());
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>
